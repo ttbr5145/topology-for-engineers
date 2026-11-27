@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# 可重建的中间产物
+第一集/audio/src/
+第一集/audio/sentences/
+第一集/audio/test/
+第一集/scenes/math/media/
+第一集/qc/
+*.log
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+第一集/renders/*/media/
+第一集/out/*.mp4

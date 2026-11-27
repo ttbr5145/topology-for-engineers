@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "backend": "shared-compositor",
+  "status": "complete",
+  "output": "out/composed.mp4",
+  "renderProfile": {
+    "mode": "final"
+  },
+  "mode": "final",
+  "resolutionReady": true,
+  "deliveryReady": true,
+  "sourcePixelsVerified": true,
+  "sourcePixelChecks": [
+    {
+      "segment": "s1",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s2",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s3",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s4",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s5",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s6",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s7",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s8",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s9",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    },
+    {
+      "segment": "s10",
+      "layer": 0,
+      "sourceSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "targetSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resampling": "lanczos",
+      "upscaled": false,
+      "exception": null
+    }
+  ],
+  "artifactRole": "composition",
+  "deliveryStage": "verified-media",
+  "deliveryChecks": {
+    "requirements": {
+      "schemaVersion": 1,
+      "purpose": "explanation",
+      "audio": "narration",
+      "captions": true
+    },
+    "narrationTracks": 1,
+    "musicTracks": 0,
+    "captionEvents": 48,
+    "passed": true,
+    "audioStreams": 1,
+    "captionRendering": "burned-in",
+    "listeningVerified": false
+  },
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24,
+    "frames": 5395
+  },
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 24.0,
+    "frames": 5395,
+    "durationSec": 224.811,
+    "audioStreams": 1,
+    "audioDurationSec": 224.81
+  },
+  "audioMode": "narration",
+  "audioMaster": {
+    "method": "two-pass-loudnorm-and-encoded-output-measurement",
+    "targetLUFS": -14.0,
+    "peakLimitDBTP": -1,
+    "inputLUFS": -28.1,
+    "outputLUFS": -14.11,
+    "outputDBTP": -1.45,
+    "verified": true
+  },
+  "subtitles": {
+    "enabled": true,
+    "events": 48,
+    "fontMetrics": {
+      "status": "measured",
+      "scale": 1.448,
+      "method": "sfnt-os2-win-metrics",
+      "unitsPerEm": 1000,
+      "winAscent": 1160,
+      "winDescent": 288
+    },
+    "textVerified": true,
+    "timingVerifiedByListening": false
+  },
+  "metadataVerified": true,
+  "validationMethod": "source pixel sizes for every layer; ffprobe -count_frames; audio registration and timeline bounds"
+}

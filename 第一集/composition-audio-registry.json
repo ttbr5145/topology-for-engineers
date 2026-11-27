@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "audio": {
+    "voice": {
+      "file": "audio/voice-v1/narration.wav",
+      "audioSha256": "e6588d684fd34b5da0fd875b327704051dbe7f847b56d6b7abfec1bc98ffd7c4",
+      "textSha256": "cbae832aef354427d0f78e420395b4a7851a9e9829f3d88a8618fa2aceafc0ae",
+      "durationSec": 223.74
+    }
+  }
+}

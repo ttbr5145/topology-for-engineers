@@ -3,7 +3,7 @@
 **用代码讲数学：把拓扑学讲稿做成带旁白与字幕的讲解动画。**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v1.0-blue.svg)](https://github.com/ttbr5145/topology-for-engineers/tags)
+[![Release](https://img.shields.io/badge/release-v1.1-blue.svg)](https://github.com/ttbr5145/topology-for-engineers/tags)
 [![Manim](https://img.shields.io/badge/Manim-Community%200.19-9cf.svg)](https://www.manim.community/)
 
 写给工科生的拓扑学入门系列。每一集一个文件夹：讲稿、台词、场景源码、配音、成片同放一处，改一句台词就能重出一版。
@@ -32,9 +32,9 @@
 | 3 | `S3Word` | 词源：位置（τοπος）+ 研究（λογος） |
 | 4 | `S4Branches` | 两个分支：橡皮几何、拓扑排序 |
 | 5 | `S5Sort` | 排序：c → a → b → e → d 的位置关系推演 |
-| 6 | `S6Queue` | 五人排队 → 点列 x₁…xₙ 与「传送带」邻域 |
-| 7 | `S7TopoBody` | 压成球、柱、锥；不能成环 |
-| 8 | `S8Deform` | 连续变形 vs 切割、粘连 |
+| 6 | `S6Queue` | 五人排队：谁在谁前面，位置关系即可排序 |
+| 7 | `S7TopoBody` | 点列 x₁…xₙ 用「邻域链环」串起来 |
+| 8 | `S8Deform` | 点聚成球，同一个物体连续变成柱、锥；缺口合不上 |
 | 9 | `S9Homeo` | 同胚映射的定义 |
 | 10 | `S10Donut` | 甜甜圈变成咖啡杯，收束研究目标与方法 |
 
@@ -98,3 +98,4 @@ python3 scripts/make_composition.py   # 生成 composition.json
 ## 许可
 
 代码与讲稿采用 [MIT](LICENSE)。字体 Noto Sans SC 依 [SIL Open Font License 1.1](https://fonts.google.com/noto/specimen/Noto+Sans+SC) 分发，放到 `第一集/fonts/` 即可复现字幕样式。
+

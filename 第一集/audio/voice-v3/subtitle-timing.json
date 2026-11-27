@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "method": "sentence-audio-sample-clock",
+  "sampleRate": 48000,
+  "sampleFrames": 10739520,
+  "durationSec": 223.74,
+  "audioSha256": "0b78b8b7c2cd6d62571c8543e2698e43cf7e0f7ee85cecaade4c49886e507ea9",
+  "speechContentVerified": false,
+  "speechOnsetsDetected": false,
+  "sentences": [
+    {
+      "sentence": 1,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-01.wav",
+      "audioSha256": "84aaf591fe1b67eccc854cba341b49f2abd22550c5cc499a4614d4fd51c074e7",
+      "textSha256": "2ea394c40c23a36bddbe0f65cd3e020b091e89da2d7a6e1f2e78a8fba28add03",
+      "startSample": 28800,
+      "endSample": 182400,
+      "sampleFrames": 153600
+    },
+    {
+      "sentence": 2,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-02.wav",
+      "audioSha256": "6b6192a2e318fe85c7cc34cb9cf8a715ceed430eb70e6adc61697c04e71a695d",
+      "textSha256": "dbaaea0b63c42df24a49ac1b41c60ed5f979c3071cdcc060c2227f7d1b264e5f",
+      "startSample": 193920,
+      "endSample": 577920,
+      "sampleFrames": 384000
+    },
+    {
+      "sentence": 3,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-03.wav",
+      "audioSha256": "777402a44a7cc821107ffd5a7b6c694f3b2da69e7b0ce9d812b5472a862d3574",
+      "textSha256": "433480d4eeb0c32da06e4e4ffdb7fd165382ec283b38d104f4b95be1891ca64b",
+      "startSample": 589440,
+      "endSample": 901440,
+      "sampleFrames": 312000
+    },
+    {
+      "sentence": 4,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-04.wav",
+      "audioSha256": "3b56e4bee3fe31bb0013637ec32efdcbbd77ad5020a31f46cbaa7627147bbd43",
+      "textSha256": "d70c06aa3d1156a0196cae8bb8c91318da4c84f4eb0c0b2a5e15aa3c944d1ae7",
+      "startSample": 912960,
+      "endSample": 1070400,
+      "sampleFrames": 157440
+    },
+    {
+      "sentence": 5,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-05.wav",
+      "audioSha256": "e5a0c34a68da26bb76083eaf40f139bd3e2549b481a669f265b21b5926d4bb37",
+      "textSha256": "73f4edfd0c60760ab94d0e1eba6adf47ef2e2c2efd3ef715cac4c8fe6ccc3a93",
+      "startSample": 1081920,
+      "endSample": 1229760,
+      "sampleFrames": 147840
+    },
+    {
+      "sentence": 6,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-06.wav",
+      "audioSha256": "edad8ecfebfc1629749b17a1b1bfe1754b3a8e88c595ab90bdae87f4ba8a120e",
+      "textSha256": "9f9230016cff18e27a4e8b91774cdfc9a6f7f703bf5a46addff28ac89f5cbebe",
+      "startSample": 1241280,
+      "endSample": 1577280,
+      "sampleFrames": 336000
+    },
+    {
+      "sentence": 7,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-07.wav",
+      "audioSha256": "2e4d94a31def2fb08e99a85fadb043896d9a4b73639a274aef1815add486894d",
+      "textSha256": "710362392639f11797518b3bf5021ad07887bcae8f871e6da0ab1639c194220a",
+      "startSample": 1588800,
+      "endSample": 1780800,
+      "sampleFrames": 192000
+    },
+    {
+      "sentence": 8,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-08.wav",
+      "audioSha256": "9fca8bb132f441a39d4d73721fd421962914d14b0000b76f2df8abe590ca5c84",
+      "textSha256": "c7176e68cdc683600c1811c1cb07ae9f96830935648a18fe21614eccfac346f2",
+      "startSample": 1792320,
+      "endSample": 1973760,
+      "sampleFrames": 181440
+    },
+    {
+      "sentence": 9,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-09.wav",
+      "audioSha256": "9ffdd5d7ea1db3a98d2fc4aee6a789cc64364282387a91b3aef26f9617a8c3f3",
+      "textSha256": "8b3b4b5f52adc5ba30837122e02bbf189793a4b3d60539dc8d4eef97d9042d62",
+      "startSample": 1985280,
+      "endSample": 2225280,
+      "sampleFrames": 240000
+    },
+    {
+      "sentence": 10,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-10.wav",
+      "audioSha256": "88075d6375e3338227b7fa12c5a5f8dae548ce3a2a22c54dbd8364e508450cde",
+      "textSha256": "a3629a6e57503f62e4570a8ca6e2f635031c2536a0e87126bf5bd0c0e3117320",
+      "startSample": 2236800,
+      "endSample": 2380800,
+      "sampleFrames": 144000
+    },
+    {
+      "sentence": 11,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-11.wav",
+      "audioSha256": "9ced41df9f7cd629e5469c9c61b3048809bad26168eafd02b3984e7c26e56621",
+      "textSha256": "41b3ebb5c5f377b1ef67012ddc6fce9f0d57cac01d05ee5781d7d42a2f97301f",
+      "startSample": 2392320,
+      "endSample": 2584320,
+      "sampleFrames": 192000
+    },
+    {
+      "sentence": 12,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-12.wav",
+      "audioSha256": "28b70bb23564e1d25bdab056cb7e881fc924e3267447eff9beea21b1d4902eac",
+      "textSha256": "59a2f7f882e79ae26e074343ad6ecd06d06e36de4c334c3a50f7c12612b566f5",
+      "startSample": 2595840,
+      "endSample": 2835840,
+      "sampleFrames": 240000
+    },
+    {
+      "sentence": 13,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-13.wav",
+      "audioSha256": "a2e829b6fd1bafb352d053176f06e9f78338961005e4d49110b8c485223f8925",
+      "textSha256": "81f1a59b6b5076d23845da8e2eadfdb1c7e74f08e48420cc7ebb4dbdf08de41e",
+      "startSample": 2847360,
+      "endSample": 3010560,
+      "sampleFrames": 163200
+    },
+    {
+      "sentence": 14,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-14.wav",
+      "audioSha256": "8c72b5a511b1b38f8af8434d7c82deee19730c3d0196cc4aac4e3b22555b11ea",
+      "textSha256": "d715c5afadf7cfb19d0d613d671120f1c2cb416eb38d84a3b375833769cd9c02",
+      "startSample": 3022080,
+      "endSample": 3241920,
+      "sampleFrames": 219840
+    },
+    {
+      "sentence": 15,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-15.wav",
+      "audioSha256": "706cf3cdcf678a59c1ebb5f88e97bf27d3e33ee8327b86c119bf70be7158cbcf",
+      "textSha256": "188ef76635515e954e007145edc0ea4ca58745d22f8e9707f99bc19002c841cd",
+      "startSample": 3253440,
+      "endSample": 3502080,
+      "sampleFrames": 248640
+    },
+    {
+      "sentence": 16,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-16.wav",
+      "audioSha256": "68c46d7d3c9b152e98e392bdb46d721d1ee169a7fee7ab18e1fe31b1016a88f9",
+      "textSha256": "f58c03d01c7a38fe7d6c68e6af7ccc90ff15c1cf698f833b7776aff20dd10b26",
+      "startSample": 3513600,
+      "endSample": 3810240,
+      "sampleFrames": 296640
+    },
+    {
+      "sentence": 17,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-17.wav",
+      "audioSha256": "cd7ab3563e9ff66212b5d1eea9120573a2abf491f1910a5a1d32a122a1bb6447",
+      "textSha256": "df30a05da6ba36c9e8ac1f35cdacf16f118e7ed7cc37bfebe7739116fd831ca9",
+      "startSample": 3821760,
+      "endSample": 4052160,
+      "sampleFrames": 230400
+    },
+    {
+      "sentence": 18,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-18.wav",
+      "audioSha256": "3492bff81dafc0c4f2fede4bb2579ada3c67ba29bef4b231d3ecff648abcef24",
+      "textSha256": "4d28f14d2d03a18850eceb3b41e23c4e0448afadfc50b03e3e6982a2f94e6b9e",
+      "startSample": 4063680,
+      "endSample": 4379520,
+      "sampleFrames": 315840
+    },
+    {
+      "sentence": 19,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-19.wav",
+      "audioSha256": "c20592c2c0d49f5b0ae2166a78dd56404c0e5583f542466535e724b6a3c00490",
+      "textSha256": "17f1178cf91cd43fc918d985db6866abe3243bca55dbd16d3afbfaf7f4187d4a",
+      "startSample": 4391040,
+      "endSample": 4631040,
+      "sampleFrames": 240000
+    },
+    {
+      "sentence": 20,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-20.wav",
+      "audioSha256": "5786d732bf7acdee36115658a88a8ac26c8737200cb074c5383f34a7c867c1e3",
+      "textSha256": "68b3f1199fac606e7cf835f30acdc3a86b5c84594a11b324e3ace0944199f653",
+      "startSample": 4642560,
+      "endSample": 4896960,
+      "sampleFrames": 254400
+    },
+    {
+      "sentence": 21,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-21.wav",
+      "audioSha256": "b167fee547f30cf1abbc24ed424d45499db5cc8b9b1454d95e870a65306283d1",
+      "textSha256": "af36c381506c7057e9c2cc2abdb18b197c9d2183cc5bd679491bd3c5614fc0f5",
+      "startSample": 4908480,
+      "endSample": 5028480,
+      "sampleFrames": 120000
+    },
+    {
+      "sentence": 22,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-22.wav",
+      "audioSha256": "7a91a417255dfe1550849ce3e643d185d9b2a3134194c22e1e3dfa46a4b73fee",
+      "textSha256": "d329a43e8d6fe0dd9314bb57328bcf3d8c002e45c083f055fb5939230c946b12",
+      "startSample": 5040000,
+      "endSample": 5208000,
+      "sampleFrames": 168000
+    },
+    {
+      "sentence": 23,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-23.wav",
+      "audioSha256": "21daa0b428e2f61b42411fb26f5dc755ba68c284412b64f18dcbb50c9d8cd004",
+      "textSha256": "90cc6cc2c7098fc8ae0c9aa59769e23c680ae3c44b6ed8d2dbd7ebbd71916420",
+      "startSample": 5219520,
+      "endSample": 5363520,
+      "sampleFrames": 144000
+    },
+    {
+      "sentence": 24,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-24.wav",
+      "audioSha256": "b05104474b06189345bd0ff7d66d998783ae3ac5b7709021b5c69bc1acc89ef4",
+      "textSha256": "a1f612cb61d43d5f3ec2ff6f1bdd2221dd466b8fdff1c8fd4fcfa75b1270dc09",
+      "startSample": 5375040,
+      "endSample": 5495040,
+      "sampleFrames": 120000
+    },
+    {
+      "sentence": 25,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-25.wav",
+      "audioSha256": "7a109f25177af3426b0061d9ded79c6e9937387a37082ae6b72045712ec36258",
+      "textSha256": "026ee581cb4646b8bb7f3bf9b49a971f27d5694be848522fbd60c806d702ecfe",
+      "startSample": 5506560,
+      "endSample": 5636160,
+      "sampleFrames": 129600
+    },
+    {
+      "sentence": 26,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-26.wav",
+      "audioSha256": "fb0f997f4cb2b7c59d4996ad410bc7e8381eeaec3824444d7c17f4c79deae9d5",
+      "textSha256": "2de563109b756a2cc26b66d028f615a4ba49049baea54a92b2a2d82304ce4288",
+      "startSample": 5647680,
+      "endSample": 5810880,
+      "sampleFrames": 163200
+    },
+    {
+      "sentence": 27,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-27.wav",
+      "audioSha256": "b6a79d9265b59e381eaaec2cf553d77ce11dd76c7db6f3fcafd3fd27498932b6",
+      "textSha256": "25fabc9c5197f011848de1d532306952f7057985ad368d231b12c5aa091b5695",
+      "startSample": 5822400,
+      "endSample": 6062400,
+      "sampleFrames": 240000
+    },
+    {
+      "sentence": 28,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-28.wav",
+      "audioSha256": "af1f0ad402b693f1d053a9a564d7f5ad36bc0bbfef71d2ba16931e4a993f0c5e",
+      "textSha256": "aacf61fd80a6dee6263c7c26248fbbdd99b0b7af56fdb0266f354f96be844515",
+      "startSample": 6073920,
+      "endSample": 6313920,
+      "sampleFrames": 240000
+    },
+    {
+      "sentence": 29,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-29.wav",
+      "audioSha256": "7b4205eafa42bf289666421ebbff20804e9234c62819fc9591ff481e77a0011b",
+      "textSha256": "10ef3072d4fbaf7d763ed9aa7ae908b3e893430fe2215b845e1d5e69b6f07f35",
+      "startSample": 6325440,
+      "endSample": 6555840,
+      "sampleFrames": 230400
+    },
+    {
+      "sentence": 30,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-30.wav",
+      "audioSha256": "3a29e15c3a59544c4af282aa11cd448f9b717a83fc901952d6018b1eb84d5586",
+      "textSha256": "2844ba4a16deb493332900a7d9c868a5cc48ea6d64438c311dddf618c7ef4680",
+      "startSample": 6567360,
+      "endSample": 6768000,
+      "sampleFrames": 200640
+    },
+    {
+      "sentence": 31,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-31.wav",
+      "audioSha256": "927c4510067b3ad9bcdb4e19f8aea065164cbc6df0351ee9d23031cd5e240fc4",
+      "textSha256": "e9c253d375b3c4bc96fc998e6708e950cc9d565e3890b8b6bdaa20e955e1f168",
+      "startSample": 6779520,
+      "endSample": 7115520,
+      "sampleFrames": 336000
+    },
+    {
+      "sentence": 32,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-32.wav",
+      "audioSha256": "1536f1a0f1abb4824d598602a5679a6f984f5bb29a016067a7f1b1e109844058",
+      "textSha256": "12429a0f2d6acf566316c48d983cbf7c568c16374e13e0edabeeca91910eebc8",
+      "startSample": 7127040,
+      "endSample": 7304640,
+      "sampleFrames": 177600
+    },
+    {
+      "sentence": 33,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-33.wav",
+      "audioSha256": "d2ee46353ee2290ca32b43e2305dea47c86a53d7a7fbe2ecb9a6dc0ea936c1a9",
+      "textSha256": "6bbdee7f32e72714e4a428d5d84c78928bfb305409b7562c1a49f9987beab9ff",
+      "startSample": 7316160,
+      "endSample": 7532160,
+      "sampleFrames": 216000
+    },
+    {
+      "sentence": 34,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-34.wav",
+      "audioSha256": "af6acf3492f28175a9f429b47badedffa3f437946e5942edceff51abfc623b31",
+      "textSha256": "a026e1bb7c3ce8190b5bf67f73daca800d37091e955e7f1c6620d9c906245a4d",
+      "startSample": 7543680,
+      "endSample": 7879680,
+      "sampleFrames": 336000
+    },
+    {
+      "sentence": 35,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-35.wav",
+      "audioSha256": "2eef29858de8d86b7a4744d9d285c95c9a7cd65794b9a90286636126150a4858",
+      "textSha256": "43157245803aabb359cbf83dd9a3b0eef5f0b4c0df9489be4d7b94b3b377bc98",
+      "startSample": 7891200,
+      "endSample": 8035200,
+      "sampleFrames": 144000
+    },
+    {
+      "sentence": 36,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-36.wav",
+      "audioSha256": "8708631faaa73615a66071f262024f28b278fe11ce9ba502e27d7f0c7722f0e6",
+      "textSha256": "aac740d6ed9e1f01a27c4de86c79310183488f6a4fcc90c77e8a96244ef5204b",
+      "startSample": 8046720,
+      "endSample": 8200320,
+      "sampleFrames": 153600
+    },
+    {
+      "sentence": 37,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-37.wav",
+      "audioSha256": "7797ed29f4e4c9608d600830da5b8c0607923c705138e16c8e2caacb026464a5",
+      "textSha256": "b2b3bc16f4d1df454328cb64c0dc61adb183161165ef481fe66a86fec8b21920",
+      "startSample": 8211840,
+      "endSample": 8369280,
+      "sampleFrames": 157440
+    },
+    {
+      "sentence": 38,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-38.wav",
+      "audioSha256": "c7637e15443b6dccedd0b3f0b20f64ce2b036d8371a0257066817515bf23c3d2",
+      "textSha256": "24d727b08541279e46025790b6533a905551faec4ae21cb9d2d80292116655b9",
+      "startSample": 8380800,
+      "endSample": 8538240,
+      "sampleFrames": 157440
+    },
+    {
+      "sentence": 39,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-39.wav",
+      "audioSha256": "f5aab32aab82ea45521786b55f473a4a96f8f04bee29d7e61b19305b127a64a4",
+      "textSha256": "ce87f94251e9bc2fc727ab6fae3ff4010ee2f8e44bc57a5a141916262f0451f2",
+      "startSample": 8549760,
+      "endSample": 8717760,
+      "sampleFrames": 168000
+    },
+    {
+      "sentence": 40,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-40.wav",
+      "audioSha256": "28ba0c464bf803aa4823db09c7f38cda88b9e33a841596a405770490e9afda6c",
+      "textSha256": "3a1973e3816d77ca14487dfae948bfe38487928548d542f6120b27ff00681290",
+      "startSample": 8729280,
+      "endSample": 8921280,
+      "sampleFrames": 192000
+    },
+    {
+      "sentence": 41,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-41.wav",
+      "audioSha256": "acabceed8d1c642f031a4df9693b2812d8a27d82b3e6ff712b2a981f7613ba20",
+      "textSha256": "6685c086fdf62311e1498196dc52e9739288713eb6bb8880362ccd7cf1385536",
+      "startSample": 8932800,
+      "endSample": 9181440,
+      "sampleFrames": 248640
+    },
+    {
+      "sentence": 42,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-42.wav",
+      "audioSha256": "22f6a3321afab353c1a50836b2ed2fcd5dd716a4b23f686e59a60ae273e13262",
+      "textSha256": "b3a1f78d6047747c5608b640bedab85ffc118345d21e67a11d610ca474ecb28b",
+      "startSample": 9192960,
+      "endSample": 9432960,
+      "sampleFrames": 240000
+    },
+    {
+      "sentence": 43,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-43.wav",
+      "audioSha256": "ac17cdf5fcb088f1faa9bf9be3004f4b8aefc81fb534eac9b453c765f70ca4f7",
+      "textSha256": "4c8bfc13b357e94ca912db0e5cc268529b237b89aad3558c4058498d8be0912c",
+      "startSample": 9444480,
+      "endSample": 9636480,
+      "sampleFrames": 192000
+    },
+    {
+      "sentence": 44,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-44.wav",
+      "audioSha256": "77bed017f03a21fbcaffaf9692e76a16560a7b1ab19224e9c5d421cca13ef581",
+      "textSha256": "6f8fa6cd1619e73376452a96fb515dbcef32bf503ceb901b1b5e9d86b8686dc3",
+      "startSample": 9648000,
+      "endSample": 9907200,
+      "sampleFrames": 259200
+    },
+    {
+      "sentence": 45,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-45.wav",
+      "audioSha256": "c7c07e4df9334d1460f4f7a4a8a80229f88ae4f33455a8225dd9f0659ea96a7d",
+      "textSha256": "f12d0c524dc0d57c3c454d4dc7d7d136522eb6bdffd47b40dd82a5eff9c070cd",
+      "startSample": 9918720,
+      "endSample": 10096320,
+      "sampleFrames": 177600
+    },
+    {
+      "sentence": 46,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-46.wav",
+      "audioSha256": "dae3f5f526454e68e6218248037130c4ec39456ad89ddb0e186dce9677669bc4",
+      "textSha256": "e11e2c34b03a82bcb50bde2e0e30ef5201b494e0fd68543dcec9d8383a82fe60",
+      "startSample": 10107840,
+      "endSample": 10265280,
+      "sampleFrames": 157440
+    },
+    {
+      "sentence": 47,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-47.wav",
+      "audioSha256": "be392544676ea80be4a2cf1cc362c5058a688cdbfb77a6e96c48df2090066846",
+      "textSha256": "b084847706d7a1dc695ae7c26bbd4264766a762c201d6a33d5179ee2bbefdce1",
+      "startSample": 10276800,
+      "endSample": 10496640,
+      "sampleFrames": 219840
+    },
+    {
+      "sentence": 48,
+      "file": "/home/user/Doubao/chats/38456717439612162/拓扑学序言视频/第一集/audio/sentences/sentence-48.wav",
+      "audioSha256": "fd56feaa307a0ee80197dc63515f567ad8ed9b7d4d0036c0ed07feb69fbe7ccf",
+      "textSha256": "a265274650dd77a46004d337d9b568cad77341681f5c0cec3804f1ad5485ca7f",
+      "startSample": 10508160,
+      "endSample": 10728000,
+      "sampleFrames": 219840
+    }
+  ]
+}

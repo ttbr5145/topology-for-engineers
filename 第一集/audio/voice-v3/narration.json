@@ -1,0 +1,294 @@
+{
+  "text": "欢迎来到视频集《面向工科的拓扑学》。在接下来的时间里，我们将用最简单、最直白、最不绕弯子的方式，带你了解简单的拓扑理论。请注意，这套视频的目标是简单直观，其中有诸多不严谨之处，敬请在评论区补充。提到拓扑，往往我们会想起绳结问题。还有甜甜圈与马克杯之间的变换。作为一名工科生，若你曾有幸翻开拓扑学的课本，会发现其中的符号晦涩难懂。诸多的定义与定理，动机也并不明确。读完十余页，尚且不知它在研究什么。那么这次，我们从“拓扑”两个字入手，探讨它所研究的问题。拓扑是一个外来词，英文为 topology。我们把它拆开来看，就是 topo 加上 logy。在希腊语中，topo 表示位置，logy 表示学科。因此，拓扑学是一门研究位置的学科。在现代数学的三大分支中，它是几何学的一门子学科。而在拓扑学中，我们只研究由位置关系决定的几何性质。如果你有幸修习过数据结构，那么一定了解一个经典的排序算法，拓扑排序。遗憾的是，拓扑排序和拓扑学仅仅有字面上的关系。但这并不妨碍我们从拓扑排序入手，了解一下拓扑体是如何被定义出来的。在店铺门口，有五位顾客挤在前台，现在要给他们排队。不幸的是，顾客只知道自己在谁的前面，或者在谁的后面。a 说，b 在我的后面。于是我们把 a 和 b 按顺序组合到一起。c 说，a 在我的后面。e 说，我在 b 的后面。d 说，我在 e 的后面。于是，我们给这五位顾客排好了顺序。当然，在计算机科学中，拓扑排序并非完全如刚才那般实现。但可以看出，拓扑排序正是用位置关系完成了排序过程。如刚才所说，拓扑排序与拓扑学只是字面上的关系。拓扑体的构造和刚才类似，但也并非完全相同。拓扑体是这样构造的。在空间中的一个点 x1，它告诉我，我的小邻域里有个 x2。x2 又告诉我，它的小邻域里有个 x3。如此往复，我们得到了这样一列点和点的邻关系。然而，它们告诉了我谁在谁的邻域里，却并没有告诉我们是上下、左右，还是前后。于是，我们可以让这一列点流动起来。当然，它也没有告诉我远近和疏密。那我们当然可以把它压成一个球。可以变成一个柱，也可以变成一个锥。但我们似乎并不能让它变成一个环。因为 xn 没有说，x1 在它的邻域里。不在邻域里，就使得 x1 和 xn 必须保持一定的距离。因此，拓扑体只能连续变形，不能切割，也不能粘连。拓扑学家给这种连续变换起了一个名字，同胚映射。能通过同胚映射互相变换的拓扑体，我们称它们是同胚的。严谨来说，这种连续变形应当是可逆的。拓扑学正是研究这类拓扑体的学科。由此，我们便能理解从甜甜圈变成咖啡杯的过程了。这就是拓扑学的研究目标和主要的研究方法。",
+  "audioFile": "narration.wav",
+  "captions": [
+    {
+      "text": "欢迎来到视频集《面向工科的拓扑学》。",
+      "startSec": 0.6,
+      "endSec": 3.8,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "在接下来的时间里，我们将用最简单、最直白、最不绕弯子的方式，带你了解简单的拓扑理论。",
+      "startSec": 4.04,
+      "endSec": 12.04,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "请注意，这套视频的目标是简单直观，其中有诸多不严谨之处，敬请在评论区补充。",
+      "startSec": 12.28,
+      "endSec": 18.78,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "提到拓扑，往往我们会想起绳结问题。",
+      "startSec": 19.02,
+      "endSec": 22.3,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "还有甜甜圈与马克杯之间的变换。",
+      "startSec": 22.54,
+      "endSec": 25.62,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "作为一名工科生，若你曾有幸翻开拓扑学的课本，会发现其中的符号晦涩难懂。",
+      "startSec": 25.86,
+      "endSec": 32.86,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "诸多的定义与定理，动机也并不明确。",
+      "startSec": 33.1,
+      "endSec": 37.1,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "读完十余页，尚且不知它在研究什么。",
+      "startSec": 37.34,
+      "endSec": 41.12,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "那么这次，我们从“拓扑”两个字入手，探讨它所研究的问题。",
+      "startSec": 41.36,
+      "endSec": 46.36,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "拓扑是一个外来词，英文为 topology。",
+      "startSec": 46.6,
+      "endSec": 49.6,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "我们把它拆开来看，就是 topo 加上 logy。",
+      "startSec": 49.84,
+      "endSec": 53.84,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "在希腊语中，topo 表示位置，logy 表示学科。",
+      "startSec": 54.08,
+      "endSec": 59.08,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "因此，拓扑学是一门研究位置的学科。",
+      "startSec": 59.32,
+      "endSec": 62.72,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "在现代数学的三大分支中，它是几何学的一门子学科。",
+      "startSec": 62.96,
+      "endSec": 67.54,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "而在拓扑学中，我们只研究由位置关系决定的几何性质。",
+      "startSec": 67.78,
+      "endSec": 72.96,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "如果你有幸修习过数据结构，那么一定了解一个经典的排序算法，拓扑排序。",
+      "startSec": 73.2,
+      "endSec": 79.38,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "遗憾的是，拓扑排序和拓扑学仅仅有字面上的关系。",
+      "startSec": 79.62,
+      "endSec": 84.42,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "但这并不妨碍我们从拓扑排序入手，了解一下拓扑体是如何被定义出来的。",
+      "startSec": 84.66,
+      "endSec": 91.24,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "在店铺门口，有五位顾客挤在前台，现在要给他们排队。",
+      "startSec": 91.48,
+      "endSec": 96.48,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "不幸的是，顾客只知道自己在谁的前面，或者在谁的后面。",
+      "startSec": 96.72,
+      "endSec": 102.02,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "a 说，b 在我的后面。",
+      "startSec": 102.26,
+      "endSec": 104.76,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "于是我们把 a 和 b 按顺序组合到一起。",
+      "startSec": 105.0,
+      "endSec": 108.5,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "c 说，a 在我的后面。",
+      "startSec": 108.74,
+      "endSec": 111.74,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "e 说，我在 b 的后面。",
+      "startSec": 111.98,
+      "endSec": 114.48,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "d 说，我在 e 的后面。",
+      "startSec": 114.72,
+      "endSec": 117.42,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "于是，我们给这五位顾客排好了顺序。",
+      "startSec": 117.66,
+      "endSec": 121.06,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "当然，在计算机科学中，拓扑排序并非完全如刚才那般实现。",
+      "startSec": 121.3,
+      "endSec": 126.3,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "但可以看出，拓扑排序正是用位置关系完成了排序过程。",
+      "startSec": 126.54,
+      "endSec": 131.54,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "如刚才所说，拓扑排序与拓扑学只是字面上的关系。",
+      "startSec": 131.78,
+      "endSec": 136.58,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "拓扑体的构造和刚才类似，但也并非完全相同。",
+      "startSec": 136.82,
+      "endSec": 141.0,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "拓扑体是这样构造的。在空间中的一个点 x1，它告诉我，我的小邻域里有个 x2。",
+      "startSec": 141.24,
+      "endSec": 148.24,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "x2 又告诉我，它的小邻域里有个 x3。",
+      "startSec": 148.48,
+      "endSec": 152.18,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "如此往复，我们得到了这样一列点和点的邻关系。",
+      "startSec": 152.42,
+      "endSec": 156.92,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "然而，它们告诉了我谁在谁的邻域里，却并没有告诉我们是上下、左右，还是前后。",
+      "startSec": 157.16,
+      "endSec": 164.16,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "于是，我们可以让这一列点流动起来。",
+      "startSec": 164.4,
+      "endSec": 167.4,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "当然，它也没有告诉我远近和疏密。",
+      "startSec": 167.64,
+      "endSec": 170.84,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "那我们当然可以把它压成一个球。",
+      "startSec": 171.08,
+      "endSec": 174.36,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "可以变成一个柱，也可以变成一个锥。",
+      "startSec": 174.6,
+      "endSec": 177.88,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "但我们似乎并不能让它变成一个环。",
+      "startSec": 178.12,
+      "endSec": 181.62,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "因为 xn 没有说，x1 在它的邻域里。",
+      "startSec": 181.86,
+      "endSec": 185.86,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "不在邻域里，就使得 x1 和 xn 必须保持一定的距离。",
+      "startSec": 186.1,
+      "endSec": 191.28,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "因此，拓扑体只能连续变形，不能切割，也不能粘连。",
+      "startSec": 191.52,
+      "endSec": 196.52,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "拓扑学家给这种连续变换起了一个名字，同胚映射。",
+      "startSec": 196.76,
+      "endSec": 200.76,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "能通过同胚映射互相变换的拓扑体，我们称它们是同胚的。",
+      "startSec": 201.0,
+      "endSec": 206.4,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "严谨来说，这种连续变形应当是可逆的。",
+      "startSec": 206.64,
+      "endSec": 210.34,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "拓扑学正是研究这类拓扑体的学科。",
+      "startSec": 210.58,
+      "endSec": 213.86,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "由此，我们便能理解从甜甜圈变成咖啡杯的过程了。",
+      "startSec": 214.1,
+      "endSec": 218.68,
+      "timingSource": "sentence-audio"
+    },
+    {
+      "text": "这就是拓扑学的研究目标和主要的研究方法。",
+      "startSec": 218.92,
+      "endSec": 223.5,
+      "timingSource": "sentence-audio"
+    }
+  ]
+}

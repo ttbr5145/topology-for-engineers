@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 timing = json.loads((ROOT / "scenes" / "math" / "timing.json").read_text(encoding="utf-8"))
-caps = json.loads((ROOT / "audio" / "voice-v1" / "captions.json").read_text(encoding="utf-8"))
+caps = json.loads((ROOT / "audio" / "voice-v3" / "captions.json").read_text(encoding="utf-8"))
 script = json.loads((ROOT / "script.json").read_text(encoding="utf-8"))
 
 segments = []
@@ -34,7 +34,7 @@ composition = {
     "audio": [{
         "id": "voice",
         "role": "narration",
-        "file": "audio/voice-v1/narration.wav",
+        "file": "audio/voice-v3/narration.wav",
         "text": full_text,
         "startFrame": 0,
         "volume": 1,

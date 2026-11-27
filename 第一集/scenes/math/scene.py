@@ -71,7 +71,7 @@ class S1Cover(Base):
         subtitle = cn("序言：拓扑学在研究什么", 40, BLUE).move_to([0, -0.25, 0])
         rule2 = Line(LEFT * 2.1, RIGHT * 2.1, color=LIGHT, stroke_width=2).move_to([0, -1.0, 0])
         note = cn("简单直观   ·   诸多不严谨   ·   欢迎评论区补充", 26, GREY).move_to([0, -1.62, 0])
-        tag = cn("第 0 集", 22, RED).move_to([0, -2.45, 0])
+        tag = cn("第一集", 22, RED).move_to([0, -2.15, 0])
         mark = cn("TOPOLOGY  FOR  ENGINEERING", 20, GREY).move_to([0, 2.25, 0])
 
         self.beat(1, GrowFromCenter(rule), FadeIn(mark, shift=UP * 0.2), run_time=1.0, lead=0.35)
@@ -91,71 +91,71 @@ class S2Impression(Base):
 
         return ParametricFunction(f, t_range=[0, 1], color=BLUE, stroke_width=5)
 
-    def donut(self, color=GOLD):
-        outer = Ellipse(width=2.0, height=1.25, color=color, stroke_width=5)
-        inner = Ellipse(width=0.85, height=0.32, color=color, stroke_width=5)
+    def torus(self, color=GOLD):
+        outer = Ellipse(width=2.2, height=1.3, color=color, stroke_width=5)
+        inner = Ellipse(width=0.98, height=0.42, color=color, stroke_width=4)
         return VGroup(outer, inner)
 
     def cup(self, color=GOLD):
-        body = RoundedRectangle(width=1.45, height=1.5, corner_radius=0.1,
-                                color=color, stroke_width=5)
-        handle = Arc(radius=0.42, start_angle=-PI / 2.2, angle=PI * 1.15, color=color,
-                     stroke_width=5).next_to(body, RIGHT, buff=-0.12)
-        rim = Ellipse(width=1.45, height=0.34, color=color, stroke_width=5).move_to(
+        body = RoundedRectangle(width=1.55, height=1.6, corner_radius=0.12, color=color, stroke_width=5)
+        handle = Arc(radius=0.46, start_angle=-PI / 2.2, angle=PI * 1.15, color=color,
+                     stroke_width=5).next_to(body, RIGHT, buff=-0.14)
+        rim = Ellipse(width=1.55, height=0.34, color=color, stroke_width=4).move_to(
             body.get_top() + DOWN * 0.02)
         return VGroup(body, handle, rim)
 
     def construct(self):
-        axis = Line(UP * 3.4, DOWN * 3.4, color=LIGHT, stroke_width=2)
-        self.add(axis)
+        # ── 第一屏：绳结（一条闭合曲线）
+        knot = self.knot().scale(1.15).move_to([0, 0.85, 0])
+        kl = cn("绳结：一条闭合曲线", 26, GREY).move_to([0, -0.55, 0])
+        self.beat(1, Create(knot), FadeIn(kl), run_time=1.5)
+        loop = Circle(radius=1.2, color=BLUE, stroke_width=5).move_to([0, 0.85, 0])
+        kl2 = cn("解开成环：曲线连续变形，没有断开", 26, GREY).move_to([0, -0.55, 0])
+        self.beat(1, Transform(knot, loop), Transform(kl, kl2), run_time=1.6, lead=1.7)
+        self.beat(2, FadeOut(knot), FadeOut(kl), run_time=0.6)
 
-        knot = self.knot().scale(0.95).move_to([-3.55, 1.15, 0])
-        knot_lbl = cn("绳结", 26, GREY).next_to(knot, DOWN, buff=0.35)
-        donut = self.donut().scale(0.75).move_to([3.55, 1.15, 0])
-        donut_lbl = cn("甜甜圈 · 马克杯", 26, GREY).next_to(donut, DOWN, buff=0.35)
+        # ── 第二屏：甜甜圈 → 马克杯（同一条轮廓线换形状）
+        torus = self.torus().move_to([0, 0.85, 0])
+        tl = cn("甜甜圈 → 马克杯：还是一条闭合曲线", 26, GREY).move_to([0, -0.55, 0])
+        self.beat(2, FadeIn(torus), FadeIn(tl), run_time=1.0)
+        cup = self.cup().move_to([0, 0.85, 0])
+        self.beat(2, Transform(torus, cup), run_time=1.8, lead=1.2)
+        self.beat(3, FadeOut(torus), FadeOut(tl), run_time=0.6)
 
-        self.beat(1, Create(knot), FadeIn(knot_lbl), run_time=1.4)
-        loop = Circle(radius=1.0, color=BLUE, stroke_width=5).move_to(knot)
-        self.beat(1, Transform(knot, loop),
-                  Transform(knot_lbl, cn("解开成环", 26, GREY).move_to(knot_lbl)),
-                  run_time=1.2, lead=1.4)
+        # ── 第三屏：翻开课本
+        head = cn("翻开课本", 34, BLUE).move_to([-5.1, 2.05, 0])
+        self.beat(3, FadeIn(head, shift=DOWN * 0.15), run_time=0.8)
 
-        self.beat(2, FadeIn(donut), FadeIn(donut_lbl), run_time=1.2)
-        cup = self.cup().scale(0.75).move_to(donut)
-        self.beat(2, Transform(donut, cup), run_time=1.6, lead=1.6)
+        s1 = MathTex(r"2^{X}", tex_template=TEX, color=INK, font_size=52).move_to([-4.9, 1.05, 0])
+        s2 = MathTex(r"\mathscr{C}", tex_template=TEX, color=INK, font_size=52).move_to([-3.6, 1.05, 0])
+        s3 = MathTex(r"\tau", tex_template=TEX, color=INK, font_size=52).move_to([-2.4, 1.05, 0])
+        l1 = cn("幂集", 18, GREY).next_to(s1, DOWN, buff=0.18)
+        l2 = cn("集族", 18, GREY).next_to(s2, DOWN, buff=0.18)
+        l3 = cn("拓扑", 18, GREY).next_to(s3, DOWN, buff=0.18)
+        self.beat(3, FadeIn(s1), FadeIn(l1), run_time=0.7, lead=0.5)
+        self.beat(3, FadeIn(s2), FadeIn(l2), run_time=0.7, lead=1.3)
+        self.beat(3, FadeIn(s3), FadeIn(l3), run_time=0.7, lead=2.1)
 
-        head = cn("翻开课本", 30, BLUE).move_to([-4.0, -0.72, 0])
-        sym1 = MathTex(r"2^{X}", tex_template=TEX, color=INK, font_size=48).move_to([-4.95, -1.6, 0])
-        sym2 = MathTex(r"\mathscr{C}", tex_template=TEX, color=INK, font_size=48).move_to([-3.95, -1.6, 0])
-        sym3 = MathTex(r"\tau", tex_template=TEX, color=INK, font_size=48).move_to([-3.1, -1.6, 0])
-        l1 = cn("幂集", 18, GREY).next_to(sym1, DOWN, buff=0.2)
-        l2 = cn("集族", 18, GREY).next_to(sym2, DOWN, buff=0.2)
-        l3 = cn("拓扑", 18, GREY).next_to(sym3, DOWN, buff=0.2)
+        # ── 定义与定理（ε-δ 语言）
+        rows = []
+        d1 = cn("开集 U", 24, INK).move_to([-5.0, 0.3, 0])
+        f1 = MathTex(r"\forall x\in U,\ \exists\,\varepsilon>0:\ B_{\varepsilon}(x)\subseteq U",
+                     tex_template=TEX, font_size=26, color=INK).align_to(np.array([-1.55, 0.05, 0]), LEFT).set_y(0.3)
+        d2 = cn("聚点 p", 24, INK).move_to([-5.0, -0.5, 0])
+        f2 = MathTex(r"\forall\varepsilon>0:\ \left(B_{\varepsilon}(p)\setminus\{p\}\right)\cap A\neq\varnothing",
+                     tex_template=TEX, font_size=26, color=INK).align_to(np.array([-1.55, -0.85, 0]), LEFT).set_y(-0.5)
+        d3 = cn("粘结引理", 24, INK).move_to([-5.0, -1.3, 0])
+        f3 = MathTex(r"f|_{A},\ f|_{B}\ \mathrm{cont.},\ A\cup B=X\ \Rightarrow\ f\ \mathrm{cont.}",
+                     tex_template=TEX, font_size=26, color=INK).align_to(np.array([-1.55, -1.75, 0]), LEFT).set_y(-1.3)
+        for g in [VGroup(d1, f1), VGroup(d2, f2), VGroup(d3, f3)]:
+            rows.append(g)
+        self.beat(4, FadeIn(rows[0]), run_time=0.8)
+        self.beat(4, FadeIn(rows[1]), run_time=0.8, lead=1.1)
+        self.beat(4, FadeIn(rows[2]), run_time=0.8, lead=2.2)
 
-        self.beat(3, FadeIn(head), run_time=0.8)
-        self.beat(3, FadeIn(sym1), FadeIn(l1), run_time=0.8, lead=0.55)
-        self.beat(3, FadeIn(sym2), FadeIn(l2), run_time=0.8, lead=1.5)
-        self.beat(3, FadeIn(sym3), FadeIn(l3), run_time=0.8, lead=2.4)
-
-        card1 = self.card("开集的定义", [-1.78, -2.3, 0])
-        card2 = self.card("聚点的定义", [0.02, -2.3, 0])
-        card3 = self.card("粘结引理", [1.72, -2.3, 0])
-        self.beat(4, FadeIn(card1), run_time=0.7)
-        self.beat(4, FadeIn(card2), run_time=0.7, lead=0.9)
-        self.beat(4, FadeIn(card3), run_time=0.7, lead=1.9)
-
-        q = cn("？", 110, RED).move_to([4.4, -1.9, 0])
-        ask = cn("读完十余页", 24, GREY).next_to(q, UP, buff=0.25)
-        self.beat(5, FadeIn(q, scale=1.4), FadeIn(ask), run_time=1.1)
+        ask = cn("读完十余页，仍不知它在研究什么", 26, INK).move_to([0, -1.72, 0])
+        self.beat(5, FadeIn(ask), run_time=1.0)
         self.finish()
-
-    def card(self, text, pos):
-        txt = cn(text, 22, INK)
-        box = RoundedRectangle(width=max(1.55, txt.width + 0.4), height=0.62, corner_radius=0.08,
-                               color=LIGHT, fill_color="#18232F", fill_opacity=1, stroke_width=1.5)
-        box.move_to(pos)
-        txt.move_to(pos)
-        return VGroup(box, txt)
 
 
 class S3Word(Base):
@@ -275,8 +275,10 @@ class S5Sort(Base):
         self.beat(2, FadeIn(kw1), FadeIn(kw2), Create(dwa), Create(cross), FadeIn(note1),
                   run_time=1.2)
 
-        note2 = cn("从排序走向拓扑体", 26, BLUE).move_to([0, -2.7, 0])
-        self.beat(3, FadeIn(note2, shift=UP * 0.2), run_time=1.0)
+        self.beat(3, FadeOut(kw1), FadeOut(kw2), FadeOut(dwa), FadeOut(cross), FadeOut(note1),
+                  run_time=0.7)
+        note2 = cn("从排序走向拓扑体", 26, BLUE).move_to([0, -1.55, 0])
+        self.beat(3, FadeIn(note2, shift=UP * 0.2), run_time=1.0, lead=0.7)
         self.finish()
 
 
@@ -286,54 +288,53 @@ class S6Queue(Base):
     def construct(self):
         names = ["a", "b", "c", "d", "e"]
         colors = [BLUE, RED, TEAL, GOLD, "#A48BCB"]
-        scatter = {"a": np.array([-4.3, 1.7, 0]), "b": np.array([-1.5, 2.4, 0]),
-                   "c": np.array([1.3, 2.0, 0]), "d": np.array([3.9, 2.4, 0]),
-                   "e": np.array([0.1, 0.7, 0])}
+        scatter = {"a": np.array([-4.3, 0.95, 0]), "b": np.array([-1.5, 1.55, 0]),
+                   "c": np.array([1.3, 1.2, 0]), "d": np.array([3.9, 1.55, 0]),
+                   "e": np.array([0.1, 0.35, 0])}
         groups = {}
         for i, ch in enumerate(names):
-            dot = Dot([0, 0, 0], radius=0.19, color=colors[i])
-            lbl = cn(ch, 32, colors[i]).next_to(dot, RIGHT, buff=0.12)
+            dot = Dot([0, 0, 0], radius=0.18, color=colors[i])
+            lbl = cn(ch, 30, colors[i]).next_to(dot, RIGHT, buff=0.1)
             groups[ch] = VGroup(dot, lbl).move_to(scatter[ch])
 
-        slot_top = Line([-3.4, -1.05, 0], [3.6, -1.05, 0], color=LIGHT, stroke_width=2)
-        slot_bot = Line([-3.4, -2.0, 0], [3.6, -2.0, 0], color=LIGHT, stroke_width=2)
+        slot_top = Line([-3.4, -0.55, 0], [3.6, -0.55, 0], color=LIGHT, stroke_width=2)
+        slot_bot = Line([-3.4, -1.45, 0], [3.6, -1.45, 0], color=LIGHT, stroke_width=2)
 
         self.beat(1, LaggedStart(*[FadeIn(groups[c], scale=1.1) for c in names], lag_ratio=0.15),
                   run_time=1.5)
-        # 向上平移，队列两条横线渐显
-        self.beat(1, *[groups[c].animate.shift(UP * 1.3) for c in names], run_time=0.8, lead=2.0)
         self.beat(1, Create(slot_top), Create(slot_bot), run_time=0.8, lead=2.8)
 
-        tip = cn("只知道谁在谁的前面 / 后面", 22, GREY).move_to([0, -2.65, 0])
+        tip = cn("只知道谁在谁的前面 / 后面", 22, GREY).move_to([0, -1.95, 0])
         self.beat(2, FadeIn(tip), run_time=0.8)
 
-        # a 说：b 在我的后面
         arrow = Arrow(groups["a"].get_right() + RIGHT * 0.05, groups["b"].get_left() + LEFT * 0.05,
                       color=RED, stroke_width=2.5, tip_length=0.16, buff=0.15)
         self.beat(3, Create(arrow), run_time=0.9)
 
-        row_y = -1.55
+        row_y = -1.0
         self.beat(4, groups["a"].animate.move_to([-0.55, row_y, 0]),
                   groups["b"].animate.move_to([0.55, row_y, 0]),
                   FadeOut(arrow), run_time=1.2)
 
         self.beat(5, groups["c"].animate.move_to([-1.85, row_y, 0]), run_time=0.9)
-        self.beat(6, groups["e"].animate.move_to([1.65, row_y, 0]), run_time=0.9)
-        self.beat(7, groups["d"].animate.move_to([2.85, row_y, 0]), run_time=0.9)
 
-        # 排好顺序：横排转竖排、左对齐
+        arr2 = Arrow(groups["b"].get_right() + RIGHT * 0.05, groups["e"].get_left() + LEFT * 0.05,
+                     color=RED, stroke_width=2.5, tip_length=0.16, buff=0.15)
+        self.beat(6, groups["e"].animate.move_to([1.65, row_y, 0]), Create(arr2), run_time=0.9)
+        self.beat(7, groups["d"].animate.move_to([2.85, row_y, 0]), FadeOut(arr2), run_time=0.9)
+
         col_x = -1.1
-        ys = [2.15, 1.05, -0.1, -1.2, -2.3]
+        ys = [1.75, 1.02, 0.28, -0.46, -1.2]
         order = ["c", "a", "b", "e", "d"]
         self.beat(8, *[groups[ch].animate.move_to([col_x, ys[k], 0]) for k, ch in enumerate(order)],
                   FadeOut(slot_top), FadeOut(slot_bot), FadeOut(tip), run_time=1.5)
 
-        done = cn("顺序：c → a → b → e → d", 28, BLUE).move_to([2.9, 1.2, 0])
-        done2 = cn("用位置关系完成排序", 26, INK).move_to([3.0, 0.2, 0])
+        done = cn("顺序：c → a → b → e → d", 28, BLUE).move_to([2.6, 1.35, 0])
+        done2 = cn("用位置关系完成排序", 26, INK).move_to([2.6, 0.55, 0])
         self.beat(8, FadeIn(done), FadeIn(done2), run_time=1.0, lead=1.6)
-        note = cn("计算机中另有实现方式", 22, GREY).move_to([3.0, -0.9, 0])
+        note = cn("计算机中另有实现方式", 22, GREY).move_to([2.6, -0.35, 0])
         self.beat(9, FadeIn(note), run_time=0.8)
-        note2 = cn("核心：位置关系", 26, RED).move_to([3.0, -1.9, 0])
+        note2 = cn("核心：位置关系", 26, RED).move_to([2.6, -1.15, 0])
         self.beat(10, FadeIn(note2, scale=1.1), run_time=0.9)
         self.finish()
 
@@ -341,149 +342,158 @@ class S6Queue(Base):
 class S7TopoBody(Base):
     seg_id = "s7"
 
-    XS = np.linspace(-2.5, 2.5, 6)
+    N = 6
+    XS = np.linspace(-2.6, 2.6, N)
 
     def construct(self):
-        labels = [MathTex(r"x_{%d}" % (i + 1), tex_template=TEX, font_size=28, color=BLUE)
-                  for i in range(6)]
         amp = ValueTracker(0.0)
         squeeze = ValueTracker(1.0)
         phase = ValueTracker(0.0)
-        state = {"n": 1}
+        lab = [MathTex(r"x_{%d}" % (i + 1), tex_template=TEX, font_size=24, color=BLUE)
+               for i in range(self.N)]
 
-        def y_of(x):
-            return 0.75 + amp.get_value() * np.sin(phase.get_value() - x * 1.2)
+        def px(i):
+            return float(self.XS[i]) * squeeze.get_value()
 
-        def x_of(i):
-            return self.XS[i] * squeeze.get_value()
+        def py(x):
+            return 0.5 + amp.get_value() * math.sin(phase.get_value() - x * 1.05)
 
-        def make_point(i):
-            d = Dot([x_of(i), y_of(x_of(i)), 0], radius=0.10, color=BLUE)
-            lb = labels[i].copy()
-            g = VGroup(d, lb)
+        def pt(i):
+            return np.array([px(i), py(px(i)), 0.0])
+
+        def mk(i):
+            g = VGroup(Dot(radius=0.09, color=BLUE), lab[i].copy())
 
             def upd(m, dt):
-                xx = x_of(i)
-                m[0].move_to([xx, y_of(xx), 0])
-                m[1].move_to([xx, y_of(xx) - 0.42, 0])
+                p = pt(i)
+                m[0].move_to(p)
+                m[1].move_to(p + DOWN * 0.26)
 
             g.add_updater(upd)
             upd(g, 0)
             return g
 
-        def belt():
-            n = state["n"]
-            if n < 2:
-                return VGroup()
-            pts = [(x_of(i), y_of(x_of(i))) for i in range(n)]
-            xmin = min(p[0] for p in pts) - 0.55
-            xmax = max(p[0] for p in pts) + 0.55
-            ymin = min(p[1] for p in pts) - 0.95
-            ymax = max(p[1] for p in pts) + 0.55
-            rect = RoundedRectangle(width=xmax - xmin, height=ymax - ymin, corner_radius=0.48,
-                                    color=TEAL, stroke_width=3)
-            rect.move_to([(xmin + xmax) / 2, (ymin + ymax) / 2, 0])
-            return DashedVMobject(rect, num_dashes=36, dashed_ratio=0.5)
+        points = VGroup(*[mk(i) for i in range(self.N)])
+        R = 0.58
 
-        belt_obj = always_redraw(belt)
-        points = [make_point(i) for i in range(6)]
+        def link(i):
+            a, b = pt(i), pt(i + 1)
+            d = b - a
+            ang = math.atan2(d[1], d[0])
+            L = float(np.linalg.norm(d)) + 2 * R
+            rect = RoundedRectangle(width=L, height=2 * R, corner_radius=R,
+                                    color=TEAL, stroke_width=2.2)
+            rect.set_fill(opacity=0)
+            rect.rotate(ang)
+            rect.move_to((a + b) / 2)
+            return DashedVMobject(rect, num_dashes=44, dashed_ratio=0.45)
 
-        head = cn("从点到邻域", 28, BLUE).move_to([0, 3.4, 0])
-        sub = cn("一个点，一个邻域，再一个点", 22, GREY).move_to([0, 2.95, 0])
+        links = [always_redraw(lambda i=i: link(i)) for i in range(self.N - 1)]
+
+        head = cn("从点到邻域", 30, BLUE).move_to([0, 2.55, 0])
+        sub = cn("一个点、一个小邻域，再一个点", 22, GREY).move_to([0, 2.1, 0])
         self.beat(1, FadeIn(head), run_time=0.8)
         self.beat(2, FadeIn(sub), run_time=0.7)
 
-        self.beat(3, FadeIn(points[0], shift=UP * 0.1), run_time=0.9)
-        ring = Circle(radius=0.92, color=TEAL, stroke_width=3).move_to(points[0][0])
-        self.beat(3, GrowFromCenter(ring), run_time=1.0, lead=1.5)
-        self.beat(3, FadeIn(points[1], shift=RIGHT * 0.2), run_time=0.9, lead=3.4)
-        state["n"] = 2
-        self.beat(3, FadeOut(ring), FadeIn(belt_obj), run_time=1.0, lead=4.8)
+        self.beat(3, FadeIn(points[0]), run_time=0.8)
+        n1 = Circle(radius=1.3, color=TEAL, stroke_width=2.5).move_to(pt(0))
+        self.beat(3, GrowFromCenter(n1), run_time=1.0, lead=1.2)
+        self.beat(3, FadeIn(points[1]), run_time=0.7, lead=2.4)
+        self.beat(3, FadeOut(n1), FadeIn(links[0]), run_time=0.9, lead=3.6)
 
-        self.beat(4, FadeIn(points[2], shift=RIGHT * 0.2), run_time=0.9)
-        state["n"] = 3
-        self.wait(0.1)
+        n2 = Circle(radius=1.3, color=TEAL, stroke_width=2.5).move_to(pt(1))
+        self.beat(4, GrowFromCenter(n2), run_time=0.9)
+        self.beat(4, FadeIn(points[2]), run_time=0.7, lead=0.9)
+        self.beat(4, FadeOut(n2), FadeIn(links[1]), run_time=0.9, lead=2.2)
 
-        self.beat(5, FadeIn(VGroup(*points[3:]), shift=RIGHT * 0.2), run_time=1.2)
-        state["n"] = 6
-        self.wait(0.1)
+        self.beat(5, LaggedStart(*[FadeIn(points[i]) for i in range(3, self.N)], lag_ratio=0.25),
+                  run_time=1.0)
+        self.beat(5, LaggedStart(*[FadeIn(links[i]) for i in range(2, self.N - 1)], lag_ratio=0.25),
+                  run_time=1.2, lead=0.8)
 
-        dirs = VGroup(cn("上", 22, GREY).move_to([0, 2.4, 0]), cn("下", 22, GREY).move_to([0, -0.6, 0]),
-                      cn("左", 22, GREY).move_to([-6.0, 0.75, 0]), cn("右", 22, GREY).move_to([6.0, 0.75, 0]),
-                      cn("前", 22, GREY).move_to([-4.7, 2.1, 0]), cn("后", 22, GREY).move_to([4.7, 2.1, 0]))
-        self.beat(6, FadeIn(dirs), run_time=0.9)
-        self.beat(6, FadeOut(dirs, scale=1.3), run_time=0.6, lead=1.9)
+        dirs = VGroup(cn("上", 20, GREY).move_to([0, 2.55, 0]), cn("下", 20, GREY).move_to([0, -0.6, 0]),
+                      cn("左", 20, GREY).move_to([-6.1, 0.5, 0]), cn("右", 20, GREY).move_to([6.1, 0.5, 0]),
+                      cn("前", 20, GREY).move_to([-4.8, 1.9, 0]), cn("后", 20, GREY).move_to([4.8, 1.9, 0]))
+        self.beat(6, FadeIn(dirs), run_time=0.8)
+        self.beat(6, FadeOut(dirs, scale=1.2), run_time=0.6, lead=1.9)
 
-        # 流动：相位持续推进，点与传送带一起波动
-        phase.add_updater(lambda m, dt: m.increment_value(dt * 1.5))
-        self.beat(7, amp.animate.set_value(0.62), run_time=1.2)
-        self.wait(3.4)
+        phase.add_updater(lambda m, dt: m.increment_value(dt * 1.3))
+        self.beat(7, amp.animate.set_value(0.55), run_time=1.2)
+        self.wait(3.0)
         phase.clear_updaters()
 
-        # 远近、疏密：横向拉伸与压缩
         self.beat(8, amp.animate.set_value(0.0), run_time=0.8)
-        self.beat(8, squeeze.animate.set_value(0.68), run_time=1.1, lead=0.9)
-        self.beat(8, squeeze.animate.set_value(1.32), run_time=1.3, lead=2.2)
-        self.wait(1.0)
-        self.play(squeeze.animate.set_value(1.0), run_time=0.9)
+        self.beat(8, squeeze.animate.set_value(0.6), run_time=1.0, lead=0.9)
+        self.beat(8, squeeze.animate.set_value(1.5), run_time=1.2, lead=2.2)
+        self.play(squeeze.animate.set_value(1.0), run_time=0.8)
         self.finish()
 
 
 class S8Deform(Base):
     seg_id = "s8"
 
-    def ball(self):
-        ball = Circle(radius=1.02, color=TEAL, fill_color=TEAL, fill_opacity=0.26, stroke_width=3)
-        dots = VGroup(*[Dot([1.02 * math.cos(a), 1.02 * math.sin(a), 0], radius=0.09, color=BLUE)
-                        for a in np.linspace(0, TAU, 6, endpoint=False)])
-        return VGroup(ball, dots)
-
-    def cylinder(self):
-        body = RoundedRectangle(width=3.0, height=1.5, corner_radius=0.72, color=TEAL,
-                                fill_color=TEAL, fill_opacity=0.26, stroke_width=3)
+    def cluster(self):
         dots = VGroup()
-        for x in [-1.1, -0.55, 0.0, 0.55, 1.1]:
-            dots.add(Dot([x, 0.42, 0], radius=0.09, color=BLUE))
-            dots.add(Dot([x, -0.42, 0], radius=0.09, color=BLUE))
-        return VGroup(body, dots)
-
-    def cone(self):
-        body = Triangle(color=TEAL, fill_color=TEAL, fill_opacity=0.26, stroke_width=3).scale(1.35)
-        dots = VGroup(*[Dot([0.52 * (1 - abs(v)), v, 0], radius=0.09, color=BLUE)
-                        for v in [-0.78, -0.3, 0.2, 0.68]])
-        return VGroup(body, dots)
-
-    def ring(self):
-        body = Arc(radius=1.02, start_angle=0.4, angle=TAU - 0.8, color=RED, stroke_width=3)
-        dots = VGroup(*[Dot([1.02 * math.cos(a), 1.02 * math.sin(a), 0], radius=0.09, color=BLUE)
-                        for a in np.linspace(0.55, TAU - 0.55, 6)])
-        gap = VGroup(Line([0.94, -0.12, 0], [1.16, 0.2, 0], color=RED, stroke_width=4),
-                     Line([0.94, 0.2, 0], [1.16, -0.12, 0], color=RED, stroke_width=4))
-        return VGroup(body, dots, gap)
+        links = VGroup()
+        n = 6
+        for i in range(n):
+            a = -1.2 + 2.4 * i / (n - 1)
+            dots.add(Dot([a, 0.0, 0], radius=0.09, color=BLUE))
+        for i in range(n - 1):
+            a = -1.2 + 2.4 * i / (n - 1)
+            b = -1.2 + 2.4 * (i + 1) / (n - 1)
+            rect = RoundedRectangle(width=(b - a) + 0.9, height=0.9, corner_radius=0.45,
+                                    color=TEAL, stroke_width=2.2)
+            rect.set_fill(opacity=0)
+            rect.move_to([(a + b) / 2, 0, 0])
+            links.add(DashedVMobject(rect, num_dashes=36, dashed_ratio=0.45))
+        return VGroup(links, dots)
 
     def construct(self):
-        head = cn("同一列点，形状可以这样变", 28, BLUE).move_to([-3.4, 3.35, 0])
-        self.beat(1, FadeIn(head), run_time=0.8)
+        chain = self.cluster().move_to([0, 0.35, 0])
+        self.beat(1, FadeIn(chain), run_time=0.9)
 
-        sphere = self.ball().move_to([-4.6, 0.85, 0])
-        self.beat(1, FadeIn(sphere, scale=0.9), run_time=1.2)
-        self.beat(1, FadeIn(cn("球", 26, GREY).move_to([-4.6, -0.62, 0])), run_time=0.6, lead=1.8)
+        # 压成球：点向中心聚拢，链环收拢为一个有体积的球
+        core = Circle(radius=1.0, color=TEAL, stroke_width=3, fill_color=TEAL, fill_opacity=0.26)
+        hl = Arc(radius=0.62, start_angle=0.45, angle=1.5, color=INK, stroke_width=2)
+        hl.move_to([0, 0.35, 0])
+        ball = VGroup(core, hl).move_to([0, 0.35, 0])
+        dots = chain[1]
+        self.beat(1, *[d.animate.move_to([0, 0.35, 0]) for d in dots], run_time=1.4, lead=0.35)
+        self.beat(1, FadeOut(chain[0]), FadeOut(dots), FadeIn(ball, scale=1.1),
+                  run_time=1.2, lead=1.5)
 
-        cyl = self.cylinder().scale(0.72).move_to([0.6, 1.55, 0])
-        self.beat(2, FadeIn(cyl, scale=0.9), run_time=1.1)
-        self.beat(2, FadeIn(cn("柱", 26, GREY).move_to([0.6, 0.55, 0])), run_time=0.6, lead=1.4)
+        body = RoundedRectangle(width=2.2, height=1.2, corner_radius=0.42, color=TEAL,
+                                stroke_width=3, fill_color=TEAL, fill_opacity=0.26)
+        rim = Ellipse(width=2.0, height=0.38, color=TEAL, stroke_width=2)
+        cyl = VGroup(body, rim).move_to([0, 0.35, 0])
+        rim.move_to(cyl[0].get_top() + DOWN * 0.06)
+        tri = Polygon([-0.85, -0.35, 0], [0.85, -0.35, 0], [0, 1.45, 0], color=TEAL,
+                      stroke_width=3, fill_color=TEAL, fill_opacity=0.26)
+        shade = Line([0.3, 0.55, 0], [0.3, 1.05, 0], color=INK, stroke_width=2)
+        cone = VGroup(tri, shade).move_to([0, 0.05, 0])
 
-        cone = self.cone().scale(0.8).move_to([4.5, 1.5, 0])
-        self.beat(2, FadeIn(cone, scale=0.9), run_time=1.0, lead=2.6)
-        self.beat(2, FadeIn(cn("锥", 26, GREY).move_to([4.5, 0.5, 0])), run_time=0.6, lead=3.6)
+        self.beat(2, Transform(ball, cyl), run_time=1.6)
+        self.beat(2, Transform(ball, cone), run_time=1.8, lead=1.6)
 
-        loop = self.ring().scale(0.85).move_to([1.1, -1.95, 0])
-        self.beat(3, FadeIn(loop, scale=0.95), run_time=1.1)
-        self.beat(3, FadeIn(cn("环？", 28, RED).move_to([3.4, -1.95, 0])), run_time=0.7, lead=1.3)
+        # 尝试闭合成环，但 x_n 不在 x_1 的邻域里，缺口合不上
+        gap = 0.9
+        loop = Arc(radius=1.0, start_angle=PI / 2 + gap, angle=TAU - 2 * gap, color=TEAL,
+                   stroke_width=3).move_to([0, 0.35, 0])
+        self.beat(3, Transform(ball, loop), run_time=1.6)
 
-        gap_lbl = cn("x₁ 与 xₙ 不在彼此的邻域里", 20, RED).move_to([1.1, -3.1, 0])
-        self.beat(4, FadeIn(gap_lbl), run_time=0.8)
-        self.beat(5, FadeIn(cn("必须保持一段距离", 24, INK).move_to([-4.6, -1.95, 0])), run_time=0.8)
+        p1 = Dot(loop.point_from_proportion(0.0), radius=0.09, color=BLUE)
+        pn = Dot(loop.point_from_proportion(1.0), radius=0.09, color=RED)
+        x1 = MathTex(r"x_1", tex_template=TEX, font_size=26, color=BLUE).next_to(p1, LEFT, buff=0.16)
+        xn = MathTex(r"x_n", tex_template=TEX, font_size=26, color=RED).next_to(pn, RIGHT, buff=0.16)
+        cross = cn("✕", 34, RED).move_to([0, 2.05, 0])
+
+        self.beat(4, FadeIn(p1), FadeIn(pn), FadeIn(x1), FadeIn(xn), FadeIn(cross), run_time=1.0)
+        why = cn("最后一点不在第一点的邻域里", 24, GREY).move_to([0, -1.2, 0])
+        self.beat(5, FadeIn(why), run_time=0.9)
+
+        keep = MathTex(r"d(x_1,x_n)>0", tex_template=TEX, font_size=30, color=INK).move_to([0, -1.66, 0])
+        self.beat(5, FadeIn(keep), run_time=1.0, lead=1.2)
         self.finish()
 
 
@@ -535,36 +545,28 @@ class S9Homeo(Base):
 class S10Donut(Base):
     seg_id = "s10"
 
-    def donut(self):
-        return VGroup(Ellipse(width=2.3, height=1.45, color=GOLD, stroke_width=5),
-                      Ellipse(width=1.0, height=0.4, color=GOLD, stroke_width=5))
-
-    def cup(self):
-        body = RoundedRectangle(width=1.7, height=1.7, corner_radius=0.12, color=GOLD, stroke_width=5)
-        handle = Arc(radius=0.5, start_angle=-PI / 2.2, angle=PI * 1.1, color=GOLD,
-                     stroke_width=5).next_to(body, RIGHT, buff=-0.14)
-        rim = Ellipse(width=1.7, height=0.38, color=GOLD, stroke_width=5).move_to(body.get_top())
-        return VGroup(body, handle, rim)
-
     def construct(self):
-        d = self.donut().scale(0.95).move_to([-3.2, 0.95, 0])
-        lbl = cn("甜甜圈", 26, GREY).next_to(d, DOWN, buff=0.4)
-        self.beat(1, FadeIn(d), FadeIn(lbl), run_time=1.0)
-        c = self.cup().scale(0.95).move_to([2.5, 0.95, 0])
-        self.beat(1, Transform(d, c), Transform(lbl, cn("咖啡杯", 26, GREY).move_to([2.5, -0.5, 0])),
-                  run_time=2.4, lead=1.0)
+        outer = Ellipse(width=2.3, height=1.35, color=GOLD, stroke_width=5).move_to([0, 0.9, 0])
+        inner = Ellipse(width=1.0, height=0.44, color=GOLD, stroke_width=4).move_to([0, 0.9, 0])
+        lbl = cn("甜甜圈：一条闭合轮廓线", 24, GREY).move_to([0, -0.35, 0])
+        self.beat(1, Create(outer), Create(inner), FadeIn(lbl), run_time=1.4)
 
-        same = cn("同胚", 34, RED).move_to([-0.4, 0.95, 0])
-        self.beat(1, FadeIn(same, scale=1.2), run_time=0.9, lead=3.8)
+        body = RoundedRectangle(width=1.6, height=1.65, corner_radius=0.14, color=GOLD,
+                                stroke_width=5).move_to([0, 0.9, 0])
+        self.beat(1, FadeOut(inner), Transform(outer, body),
+                  Transform(lbl, cn("马克杯：还是同一条轮廓线", 24, GREY).move_to([0, -0.35, 0])),
+                  run_time=1.8, lead=1.8)
 
-        goal = cn("研究目标：由位置关系决定的几何性质", 32, INK).move_to([0, -1.7, 0])
-        way = cn("研究方法：连续变形（同胚）", 30, BLUE).move_to([0, -2.4, 0])
-        self.beat(2, FadeIn(goal, shift=UP * 0.2), run_time=1.0)
-        self.beat(2, FadeIn(way, shift=UP * 0.2), run_time=0.9, lead=1.0)
+        handle = Arc(radius=0.48, start_angle=-PI / 2.2, angle=PI * 1.15, color=GOLD,
+                     stroke_width=5).next_to(body, RIGHT, buff=-0.12)
+        rim = Ellipse(width=1.6, height=0.32, color=GOLD, stroke_width=4).move_to(
+            body.get_top() + DOWN * 0.02)
+        self.beat(1, Create(handle), Create(rim), run_time=1.2, lead=3.4)
 
-        end = VGroup(cn("序言", 40, INK), cn("面向工科的拓扑学", 22, GREY)).arrange(DOWN, buff=0.3)
-        end.move_to([0, -1.9, 0])
-        self.beat(2, FadeOut(goal), FadeOut(way), FadeIn(end, shift=UP * 0.2), run_time=1.0, lead=2.9)
+        goal = cn("研究目标：由位置关系决定的几何性质", 28, INK).move_to([0, -1.55, 0])
+        way = cn("研究方法：连续变形（同胚）", 26, BLUE).move_to([0, -2.1, 0])
+        self.beat(2, FadeIn(goal), run_time=1.0)
+        self.beat(2, FadeIn(way), run_time=0.9, lead=1.2)
         self.finish()
 
 

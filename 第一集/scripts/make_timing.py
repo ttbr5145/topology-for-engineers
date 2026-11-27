@@ -13,7 +13,7 @@ TAIL_FRAMES = 40
 LEAD_SILENCE = 0.0  # 片头静默由 build_caption_track 的 initialSilenceSec 提供
 
 SCRIPT = json.loads((ROOT / "script.json").read_text(encoding="utf-8"))
-CAPS = json.loads((ROOT / "audio" / "voice-v1" / "captions.json").read_text(encoding="utf-8"))
+CAPS = json.loads((ROOT / "audio" / "voice-v3" / "captions.json").read_text(encoding="utf-8"))
 caps = CAPS
 assert len(caps) == len(SCRIPT["sentences"]), (len(caps), len(SCRIPT["sentences"]))
 

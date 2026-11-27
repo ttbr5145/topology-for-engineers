@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "backend": "shared-compositor",
   "status": "complete",
-  "output": "out/composed.mp4",
+  "output": "out/01-序言-面向工科的拓扑学.mp4",
   "renderProfile": {
     "mode": "final"
   },
@@ -199,9 +199,9 @@
     "method": "two-pass-loudnorm-and-encoded-output-measurement",
     "targetLUFS": -14.0,
     "peakLimitDBTP": -1,
-    "inputLUFS": -28.1,
+    "inputLUFS": -28.13,
     "outputLUFS": -14.11,
-    "outputDBTP": -1.45,
+    "outputDBTP": -1.47,
     "verified": true
   },
   "subtitles": {

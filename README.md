@@ -97,4 +97,4 @@ python3 scripts/make_composition.py   # 生成 composition.json
 
 ## 许可
 
-代码与讲稿采用 [MIT](LICENSE)。字体 Noto Sans SC 依 SIL Open Font License 1.1 分发（https://fonts.google.com/noto/specimen/Noto+Sans+SC），放到 `第一集/fonts/` 即可复现字幕样式。
+代码与讲稿采用 [MIT](LICENSE)。字体 Noto Sans SC 依 [SIL Open Font License 1.1](https://fonts.google.com/noto/specimen/Noto+Sans+SC) 分发，放到 `第一集/fonts/` 即可复现字幕样式。
